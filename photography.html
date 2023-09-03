@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Photo Collage</title>
+    <style>
+    
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.photo-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+    margin: 5px;
+    width: 250px; /* Adjust the size of the square preview */
+    height: 250px; /* Adjust the size of the square preview */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-photo-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    text-align: center;
+}
+
+.full-photo {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+    </style>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photography.html">photography</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="video.html">Video editing</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="photo-collage">
+        <div class="photo">
+            <img src="photography/dark_park.jpg" alt="Landscape Photo 1">
+        </div>
+        <div class="photo">
+            <img src="photography/desk_setuo.jpg" alt="Portrait Photo 1">
+        </div>
+        <div class="photo">
+            <img src="photography/flyover.jpg" alt="Landscape Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/misty_field.jpg" alt="Portrait Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/moon_tree.png" alt="Square Photo 1">
+        </div>
+        <div class="photo">
+            <img src="photography/peacock_feather.jpg" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/rollercoster.jpeg" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/template.png" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/bijwasan_flyover.jpeg" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/darkclouds.jpg" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/jhulla.jpeg" alt="Square Photo 2">
+        </div>
+                <div class="photo">
+            <img src="photography/sona.jpg" alt="Square Photo 2">
+        </div>
+        <div class="photo">
+            <img src="photography/trees.jpg" alt="Square Photo 2">
+        </div>
+    </div>
+    <div class="full-photo-overlay">
+        <span class="close-btn" onclick="closeFullPhoto()">×</span>
+        <img class="full-photo" src="" alt="Full Photo">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
